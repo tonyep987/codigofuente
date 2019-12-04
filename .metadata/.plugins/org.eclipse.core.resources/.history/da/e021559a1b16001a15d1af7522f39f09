@@ -1,0 +1,38 @@
+package com.intercorp.retail.repository.bean;
+
+import java.io.Serializable;
+
+import com.intercorp.retail.model.Cliente;
+
+public class CreaClienteRequest implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3491518917843508779L;
+
+	private Cliente cliente;
+	private String codigoRespuesta;
+	private String descripcionRespuesta;
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	public String getCodigoRespuesta() {
+		return codigoRespuesta;
+	}
+	public void setCodigoRespuesta(String codigoRespuesta) {
+		this.codigoRespuesta = codigoRespuesta;
+	}
+	public String getDescripcionRespuesta() {
+		return descripcionRespuesta;
+	}
+	public void setDescripcionRespuesta(String descripcionRespuesta) {
+		this.descripcionRespuesta = descripcionRespuesta;
+	}
+	
+	
+}

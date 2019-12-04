@@ -1,0 +1,5 @@
+package com.intercorp.retail.repository;
+
+public class ClienteRepositoryImpl {
+
+}

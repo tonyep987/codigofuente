@@ -1,0 +1,5 @@
+package com.intercorp.retail.model;
+
+public class Cliente {
+
+}

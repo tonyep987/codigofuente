@@ -1,0 +1,242 @@
+package com.intercorp.retail.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ApplicationProperties {
+
+	@Value("${microservicio.name}")
+	private String microservicioName;
+
+	@Value("${anio.promedio}")
+	private String anioPromedio;
+
+	@Value("${tipo-documento.mensaje.idf0}")
+	private String tipoDocumentoMensajeIdf0;
+
+	@Value("${tipo-documento.codigo.idf1}")
+	private String tipoDocumentoCodigoIdf1;
+
+	@Value("${tipo-documento.mensaje.idf1}")
+	private String tipoDocumentoMensajeIdf1;
+
+	@Value("${tipo-documento.codigo.idf2}")
+	private String tipoDocumentoCodigoIdf2;
+
+	@Value("${tipo-documento.mensaje.idf2}")
+	private String tipoDocumentoMensajeIdf2;
+
+	@Value("${tipo-documento.codigo.idf3}")
+	private String tipoDocumentoCodigoIdf3;
+
+	@Value("${tipo-documento.mensaje.idf3}")
+	private String tipoDocumentoMensajeIdf3;
+
+	@Value("${tipo-documento.codigo.idt1}")
+	private String tipoDocumentoCodigoIdt1;
+
+	@Value("${tipo-documento.mensaje.idt1}")
+	private String tipoDocumentoMensajeIdt1;
+
+	@Value("${tipo-documento.codigo.idt2}")
+	private String tipoDocumentoCodigoIdt2;
+
+	@Value("${tipo-documento.mensaje.idt2}")
+	private String tipoDocumentoMensajeIdt2;
+
+	@Value("${tipo-documento.codigo.idt3}")
+	private String tipoDocumentoCodigoIdt3;
+
+	@Value("${tipo-documento.mensaje.idt3}")
+	private String tipoDocumentoMensajeIdt3;
+
+	@Value("${tipo-documento.codigo.idt4}")
+	private String tipoDocumentoCodigoIdt4;
+
+	@Value("${tipo-documento.mensaje.idt4}")
+	private String tipoDocumentoMensajeIdt4;
+
+	@Value("${tipo-documento.codigo.idt5}")
+	private String tipoDocumentoCodigoIdt5;
+
+	@Value("${tipo-documento.mensaje.idt5}")
+	private String tipoDocumentoMensajeIdt5;
+
+	@Value("${constante.nombreBD}")
+	private String nombreBD;
+
+	@Value("${valorMaximoFirebase}")
+	private int valorMaximoFirebase;
+
+	public String getMicroservicioName() {
+		return microservicioName;
+	}
+
+	public void setMicroservicioName(String microservicioName) {
+		this.microservicioName = microservicioName;
+	}
+
+	public String getTipoDocumentoCodigoIdf0() {
+		return tipoDocumentoCodigoIdf0;
+	}
+
+	public void setTipoDocumentoCodigoIdf0(String tipoDocumentoCodigoIdf0) {
+		this.tipoDocumentoCodigoIdf0 = tipoDocumentoCodigoIdf0;
+	}
+
+	public String getTipoDocumentoMensajeIdf0() {
+		return tipoDocumentoMensajeIdf0;
+	}
+
+	public void setTipoDocumentoMensajeIdf0(String tipoDocumentoMensajeIdf0) {
+		this.tipoDocumentoMensajeIdf0 = tipoDocumentoMensajeIdf0;
+	}
+
+	public String getTipoDocumentoCodigoIdf1() {
+		return tipoDocumentoCodigoIdf1;
+	}
+
+	public void setTipoDocumentoCodigoIdf1(String tipoDocumentoCodigoIdf1) {
+		this.tipoDocumentoCodigoIdf1 = tipoDocumentoCodigoIdf1;
+	}
+
+	public String getTipoDocumentoMensajeIdf1() {
+		return tipoDocumentoMensajeIdf1;
+	}
+
+	public void setTipoDocumentoMensajeIdf1(String tipoDocumentoMensajeIdf1) {
+		this.tipoDocumentoMensajeIdf1 = tipoDocumentoMensajeIdf1;
+	}
+
+	public String getTipoDocumentoCodigoIdf2() {
+		return tipoDocumentoCodigoIdf2;
+	}
+
+	public void setTipoDocumentoCodigoIdf2(String tipoDocumentoCodigoIdf2) {
+		this.tipoDocumentoCodigoIdf2 = tipoDocumentoCodigoIdf2;
+	}
+
+	public String getTipoDocumentoMensajeIdf2() {
+		return tipoDocumentoMensajeIdf2;
+	}
+
+	public void setTipoDocumentoMensajeIdf2(String tipoDocumentoMensajeIdf2) {
+		this.tipoDocumentoMensajeIdf2 = tipoDocumentoMensajeIdf2;
+	}
+
+	public String getTipoDocumentoCodigoIdf3() {
+		return tipoDocumentoCodigoIdf3;
+	}
+
+	public void setTipoDocumentoCodigoIdf3(String tipoDocumentoCodigoIdf3) {
+		this.tipoDocumentoCodigoIdf3 = tipoDocumentoCodigoIdf3;
+	}
+
+	public String getTipoDocumentoMensajeIdf3() {
+		return tipoDocumentoMensajeIdf3;
+	}
+
+	public void setTipoDocumentoMensajeIdf3(String tipoDocumentoMensajeIdf3) {
+		this.tipoDocumentoMensajeIdf3 = tipoDocumentoMensajeIdf3;
+	}
+
+	public String getTipoDocumentoCodigoIdt1() {
+		return tipoDocumentoCodigoIdt1;
+	}
+
+	public void setTipoDocumentoCodigoIdt1(String tipoDocumentoCodigoIdt1) {
+		this.tipoDocumentoCodigoIdt1 = tipoDocumentoCodigoIdt1;
+	}
+
+	public String getTipoDocumentoMensajeIdt1() {
+		return tipoDocumentoMensajeIdt1;
+	}
+
+	public void setTipoDocumentoMensajeIdt1(String tipoDocumentoMensajeIdt1) {
+		this.tipoDocumentoMensajeIdt1 = tipoDocumentoMensajeIdt1;
+	}
+
+	public String getTipoDocumentoCodigoIdt2() {
+		return tipoDocumentoCodigoIdt2;
+	}
+
+	public void setTipoDocumentoCodigoIdt2(String tipoDocumentoCodigoIdt2) {
+		this.tipoDocumentoCodigoIdt2 = tipoDocumentoCodigoIdt2;
+	}
+
+	public String getTipoDocumentoMensajeIdt2() {
+		return tipoDocumentoMensajeIdt2;
+	}
+
+	public void setTipoDocumentoMensajeIdt2(String tipoDocumentoMensajeIdt2) {
+		this.tipoDocumentoMensajeIdt2 = tipoDocumentoMensajeIdt2;
+	}
+
+	public String getTipoDocumentoCodigoIdt3() {
+		return tipoDocumentoCodigoIdt3;
+	}
+
+	public void setTipoDocumentoCodigoIdt3(String tipoDocumentoCodigoIdt3) {
+		this.tipoDocumentoCodigoIdt3 = tipoDocumentoCodigoIdt3;
+	}
+
+	public String getTipoDocumentoMensajeIdt3() {
+		return tipoDocumentoMensajeIdt3;
+	}
+
+	public void setTipoDocumentoMensajeIdt3(String tipoDocumentoMensajeIdt3) {
+		this.tipoDocumentoMensajeIdt3 = tipoDocumentoMensajeIdt3;
+	}
+
+	public String getTipoDocumentoCodigoIdt4() {
+		return tipoDocumentoCodigoIdt4;
+	}
+
+	public void setTipoDocumentoCodigoIdt4(String tipoDocumentoCodigoIdt4) {
+		this.tipoDocumentoCodigoIdt4 = tipoDocumentoCodigoIdt4;
+	}
+
+	public String getTipoDocumentoMensajeIdt4() {
+		return tipoDocumentoMensajeIdt4;
+	}
+
+	public void setTipoDocumentoMensajeIdt4(String tipoDocumentoMensajeIdt4) {
+		this.tipoDocumentoMensajeIdt4 = tipoDocumentoMensajeIdt4;
+	}
+
+	public String getTipoDocumentoCodigoIdt5() {
+		return tipoDocumentoCodigoIdt5;
+	}
+
+	public void setTipoDocumentoCodigoIdt5(String tipoDocumentoCodigoIdt5) {
+		this.tipoDocumentoCodigoIdt5 = tipoDocumentoCodigoIdt5;
+	}
+
+	public String getTipoDocumentoMensajeIdt5() {
+		return tipoDocumentoMensajeIdt5;
+	}
+
+	public void setTipoDocumentoMensajeIdt5(String tipoDocumentoMensajeIdt5) {
+		this.tipoDocumentoMensajeIdt5 = tipoDocumentoMensajeIdt5;
+	}
+
+	public String getNombreBD() {
+		return nombreBD;
+	}
+
+	public void setNombreBD(String nombreBD) {
+		this.nombreBD = nombreBD;
+	}
+
+	public int getValorMaximoFirebase() {
+		return valorMaximoFirebase;
+	}
+
+	public void setValorMaximoFirebase(int valorMaximoFirebase) {
+		this.valorMaximoFirebase = valorMaximoFirebase;
+	}
+	
+	
+
+}

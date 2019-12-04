@@ -1,0 +1,8 @@
+package com.intercorp.retail.service;
+
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+
+public interface ClienteService {
+
+	public ListaClienteResponse listaCliente();
+}

@@ -1,0 +1,26 @@
+package com.intercorp.retail.controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+import com.intercorp.retail.service.ClienteService;
+
+@RestController
+@RequestMapping(path = "/rest-api/cliente")
+public class ClienteController {
+
+	private ClienteService clienteService;
+	
+	@GetMapping(path="/listclientes", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody ListaClienteResponse listaClientes() {
+		ListaClienteResponse clientes = new ListaClienteResponse();
+		
+		clientes = clienteService.listaCliente();
+		
+		return clientes;
+	}
+}

@@ -1,0 +1,14 @@
+package com.intercorp.retail.repository.bean;
+
+import java.io.Serializable;
+
+public class CreaClienteResponse implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8830864837827974403L;
+	
+	private String codigoRespuesta;
+	private String descripcionRespuesta;
+}

@@ -1,0 +1,90 @@
+package com.intercorp.retail.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ApplicationProperties {
+
+	@Value("${microservicio.name}")
+	private String microservicioName;
+
+	@Value("${anio.promedio}")
+	private String anioPromedio;
+
+	@Value("${tipo-documento.mensaje.idf0}")
+	private String tipoDocumentoMensajeIdf0;
+
+	@Value("${tipo-documento.codigo.idf1}")
+	private String tipoDocumentoCodigoIdf1;
+
+	@Value("${tipo-documento.mensaje.idf1}")
+	private String tipoDocumentoMensajeIdf1;
+
+	@Value("${tipo-documento.codigo.idf2}")
+	private String tipoDocumentoCodigoIdf2;
+
+	@Value("${tipo-documento.mensaje.idf2}")
+	private String tipoDocumentoMensajeIdf2;
+
+	@Value("${tipo-documento.codigo.idf3}")
+	private String tipoDocumentoCodigoIdf3;
+
+	@Value("${tipo-documento.mensaje.idf3}")
+	private String tipoDocumentoMensajeIdf3;
+
+	@Value("${tipo-documento.codigo.idt1}")
+	private String tipoDocumentoCodigoIdt1;
+
+	@Value("${tipo-documento.mensaje.idt1}")
+	private String tipoDocumentoMensajeIdt1;
+
+	@Value("${tipo-documento.codigo.idt2}")
+	private String tipoDocumentoCodigoIdt2;
+
+	@Value("${tipo-documento.mensaje.idt2}")
+	private String tipoDocumentoMensajeIdt2;
+
+	@Value("${tipo-documento.codigo.idt3}")
+	private String tipoDocumentoCodigoIdt3;
+
+	@Value("${tipo-documento.mensaje.idt3}")
+	private String tipoDocumentoMensajeIdt3;
+
+	@Value("${tipo-documento.codigo.idt4}")
+	private String tipoDocumentoCodigoIdt4;
+
+	@Value("${tipo-documento.mensaje.idt4}")
+	private String tipoDocumentoMensajeIdt4;
+
+	@Value("${tipo-documento.codigo.idt5}")
+	private String tipoDocumentoCodigoIdt5;
+
+	@Value("${tipo-documento.mensaje.idt5}")
+	private String tipoDocumentoMensajeIdt5;
+
+	@Value("${constante.nombreBD}")
+	private String nombreBD;
+
+	@Value("${valorMaximoFirebase}")
+	private int valorMaximoFirebase;
+
+	public String getMicroservicioName() {
+		return microservicioName;
+	}
+
+	public void setMicroservicioName(String microservicioName) {
+		this.microservicioName = microservicioName;
+	}
+	
+	public String getAnioPromedio() {
+		return anioPromedio;
+	}
+
+	public void setAnioPromedio(String anioPromedio) {
+		this.anioPromedio = anioPromedio;
+	}
+	
+	
+
+}

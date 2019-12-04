@@ -1,0 +1,53 @@
+package com.intercorp.retail.service;
+
+import java.util.Calendar;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.intercorp.retail.config.ApplicationProperties;
+import com.intercorp.retail.model.Cliente;
+import com.intercorp.retail.repository.ClienteRepository;
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+
+@Service
+public class ClienteServiceImpl implements ClienteService{
+
+	@Autowired
+    private ApplicationProperties properties;
+	
+	@Autowired
+	private ClienteRepository clienteRepository;
+	
+	/**@Autowired
+	private Gson gson;*/
+	
+	@Override
+	public ListaClienteResponse listaCliente() {
+		ListaClienteResponse clientes = new ListaClienteResponse();
+		
+		long tiempoInicio = System.currentTimeMillis();
+		
+		try {
+			clientes = clienteRepository.listaCliente();
+			//clientes.getListaCliente()
+			Calendar calendar = Calendar.getInstance();
+			int i = 0;
+			for(Cliente cliente : clientes.getListaCliente()) {
+				calendar.setTime(cliente.getFechanacimiento()); 
+			    calendar.add(Calendar.YEAR, Integer.parseInt(properties.getAnioPromedio()));
+				clientes.getListaCliente().get(i).setFechaPosibleMuerte(calendar.getTime());
+				i++;
+			}
+			
+			
+			
+		}catch(Exception e) {
+			
+		}
+		
+		
+		return clientes;
+	}
+
+}

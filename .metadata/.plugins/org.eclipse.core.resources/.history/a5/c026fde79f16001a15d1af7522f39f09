@@ -1,0 +1,28 @@
+package com.intercorp.retail.repository;
+
+import com.intercorp.retail.repository.bean.CreaClienteRequest;
+import com.intercorp.retail.repository.bean.CreaClienteResponse;
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+import com.intercorp.retail.repository.bean.PideClienteResponse;
+
+public class ClienteRepositoryImpl implements ClienteRepository{
+
+	@Override
+	public CreaClienteResponse crearCliente(CreaClienteRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PideClienteResponse pideCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ListaClienteResponse listaCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

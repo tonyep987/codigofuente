@@ -1,0 +1,14 @@
+package com.intercorp.retail.repository;
+
+
+
+import com.intercorp.retail.model.Cliente;
+import com.intercorp.retail.repository.bean.CreaClienteRequest;
+import com.intercorp.retail.repository.bean.CreaClienteResponse;
+
+public interface ClienteRepository{
+
+	CreaClienteResponse crearCliente(CreaClienteRequest request);
+	
+	PideClienteReponse pideCliente();
+}

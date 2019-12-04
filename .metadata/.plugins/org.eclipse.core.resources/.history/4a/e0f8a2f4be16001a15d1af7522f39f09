@@ -1,0 +1,73 @@
+package com.intercorp.retail.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
+import com.intercorp.retail.model.Cliente;
+import com.intercorp.retail.repository.bean.CreaClienteRequest;
+import com.intercorp.retail.repository.bean.CreaClienteResponse;
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+import com.intercorp.retail.repository.bean.PideClienteResponse;
+
+@Repository
+@Transactional
+public class ClienteRepositoryImpl implements ClienteRepository{
+
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	@Override
+	public CreaClienteResponse crearCliente(CreaClienteRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PideClienteResponse pideCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ListaClienteResponse listaCliente() {
+		ListaClienteResponse clienteResponse = new ListaClienteResponse();
+		List<Cliente> listaClienteResponse = new ArrayList<Cliente>();
+		
+		String hql = "select c.nombre,c.apellido,c.edad,c.fechanacimiento from clientes.cliente c";
+		Query q1 = entityManager.createQuery(hql);
+		List results = q1.getResultList();
+		if(!results.isEmpty()){
+			int i=0;
+			for(Object result : results) {
+				//tipoDocumentoEntity = (TipoDocumento) result;
+				clienteResponse = (ListaClienteResponse) result;
+				Cliente cliente = new Cliente();
+				cliente.setNombre(clienteResponse.getListaCliente().get(i).getNombre());
+				cliente.setApellido(clienteResponse.getListaCliente().get(i).getApellido());
+				cliente.setEdad(clienteResponse.getListaCliente().get(i).getEdad());
+				cliente.setFechanacimiento(clienteResponse.getListaCliente().get(i).getFechanacimiento());
+				listaClienteResponse.add(cliente);
+				i++;
+			}
+			if(!listaClienteResponse.isEmpty()) {
+				clienteResponse.setListaCliente(listaClienteResponse);
+				clienteResponse.setCodigoRespuesta("200");
+				clienteResponse.setDescripcionRespuesta("Exito");
+			}else {
+				clienteResponse.setCodigoRespuesta("401");
+				clienteResponse.setDescripcionRespuesta("Error");
+			}
+			
+		}
+		
+		return clienteResponse;
+	}
+
+}

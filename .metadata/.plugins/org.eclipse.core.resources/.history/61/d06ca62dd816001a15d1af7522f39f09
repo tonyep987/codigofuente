@@ -1,0 +1,40 @@
+package com.intercorp.retail.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.intercorp.retail.config.ApplicationProperties;
+import com.intercorp.retail.repository.ClienteRepository;
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+
+@Service
+public class ClienteServiceImpl implements ClienteService{
+
+	@Autowired
+    private ApplicationProperties properties;
+	
+	@Autowired
+	private ClienteRepository clienteRepository;
+	
+	/**@Autowired
+	private Gson gson;*/
+	
+	@Override
+	public ListaClienteResponse listaCliente() {
+		ListaClienteResponse clientes = new ListaClienteResponse();
+		
+		long tiempoInicio = System.currentTimeMillis();
+		
+		try {
+			clientes = clienteRepository.listaCliente();
+			//clientes.getListaCliente()
+			
+		}catch(Exception e) {
+			
+		}
+		
+		
+		return clientes;
+	}
+
+}

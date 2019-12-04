@@ -1,0 +1,5 @@
+package com.intercorp.retail.entity;
+
+public class TbCliente {
+
+}

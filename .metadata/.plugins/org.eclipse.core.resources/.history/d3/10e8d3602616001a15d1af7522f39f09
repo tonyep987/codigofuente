@@ -1,0 +1,8 @@
+package com.intercorp.retail.repository.bean;
+
+import java.io.Serializable;
+
+public class ListaClienteResponse implements Serializable{
+
+	
+}

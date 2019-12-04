@@ -1,0 +1,84 @@
+package com.intercorp.retail.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
+import com.intercorp.retail.entity.TbCliente;
+import com.intercorp.retail.model.Cliente;
+import com.intercorp.retail.repository.bean.CreaClienteRequest;
+import com.intercorp.retail.repository.bean.CreaClienteResponse;
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+import com.intercorp.retail.repository.bean.PideClienteResponse;
+
+@Repository
+@Transactional
+public class ClienteRepositoryImpl implements ClienteRepository{
+
+	@PersistenceContext
+	private EntityManager entityManager;
+	
+	@Override
+	public CreaClienteResponse crearCliente(CreaClienteRequest request) {
+		CreaClienteResponse creaClienteResponse = new CreaClienteResponse();
+
+		String hql = "insert into clientes.cliente(idcliente,nombre,apellido,edad,fechanacimiento)values(?,?,?,?,?)";
+		entityManager.createNativeQuery(hql).setParameter(1, request.getCliente().getIdcliente())
+			      .setParameter(2, request.getCliente().getNombre())
+			      .setParameter(3, request.getCliente().getApellido())
+			      .setParameter(4, request.getCliente().getEdad())
+			      .setParameter(5, request.getCliente().getFechanacimiento())
+			      .executeUpdate();
+		creaClienteResponse.setCodigoRespuesta("200");
+		creaClienteResponse.setDescripcionRespuesta("Exito");
+		return creaClienteResponse;
+	}
+
+	@Override
+	public PideClienteResponse pideCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ListaClienteResponse listaCliente() {
+		ListaClienteResponse clienteResponse = new ListaClienteResponse();
+		List<Cliente> listaClienteResponse = new ArrayList<Cliente>();
+		TbCliente cliente = new TbCliente();
+		String hql = "select c from TbCliente c";
+		Query q1 = entityManager.createQuery(hql);
+		List results = q1.getResultList();
+		if(!results.isEmpty()){
+			for(Object result : results) {
+				//tipoDocumentoEntity = (TipoDocumento) result;
+				cliente = (TbCliente) result;
+				Cliente clientes = new Cliente();
+				
+				clientes.setIdcliente(cliente.getIdcliente());
+				clientes.setNombre(cliente.getNombre());
+				clientes.setApellido(cliente.getApellido());
+				clientes.setEdad(cliente.getEdad());
+				clientes.setFechanacimiento(cliente.getFechanacimiento());
+				listaClienteResponse.add(clientes);
+			}
+			if(!listaClienteResponse.isEmpty()) {
+				clienteResponse.setListaCliente(listaClienteResponse);
+				clienteResponse.setCodigoRespuesta("200");
+				clienteResponse.setDescripcionRespuesta("Exito");
+			}else {
+				clienteResponse.setCodigoRespuesta("401");
+				clienteResponse.setDescripcionRespuesta("Error");
+			}
+			
+		}
+		
+		return clienteResponse;
+	}
+
+}

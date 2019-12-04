@@ -1,0 +1,13 @@
+package com.intercorp.retail.repository.bean;
+
+import java.io.Serializable;
+
+public class CreaCliente implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3491518917843508779L;
+
+	
+}

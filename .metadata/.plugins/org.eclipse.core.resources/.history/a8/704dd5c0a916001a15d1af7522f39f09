@@ -1,0 +1,13 @@
+package com.intercorp.retail.service;
+
+import com.intercorp.retail.repository.bean.ListaClienteResponse;
+
+public class ClienteServiceImpl implements ClienteService{
+
+	@Override
+	public ListaClienteResponse listaCliente() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

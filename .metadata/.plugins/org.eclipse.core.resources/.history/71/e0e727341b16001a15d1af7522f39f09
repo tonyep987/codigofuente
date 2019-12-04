@@ -1,0 +1,7 @@
+package com.intercorp.retail.repository.bean;
+
+import java.io.Serializable;
+
+public class CreaCliente implements Serializable{
+
+}
