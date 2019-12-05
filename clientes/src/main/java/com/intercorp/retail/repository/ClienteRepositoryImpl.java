@@ -15,7 +15,6 @@ import com.intercorp.retail.model.Cliente;
 import com.intercorp.retail.repository.bean.CreaClienteRequest;
 import com.intercorp.retail.repository.bean.CreaClienteResponse;
 import com.intercorp.retail.repository.bean.ListaClienteResponse;
-import com.intercorp.retail.repository.bean.PideClienteResponse;
 
 @Repository
 @Transactional
@@ -38,12 +37,6 @@ public class ClienteRepositoryImpl implements ClienteRepository{
 		creaClienteResponse.setCodigoRespuesta("200");
 		creaClienteResponse.setDescripcionRespuesta("Exito");
 		return creaClienteResponse;
-	}
-
-	@Override
-	public PideClienteResponse pideCliente() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

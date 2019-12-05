@@ -23,6 +23,7 @@ public class ClienteServiceImpl implements ClienteService{
 	@Autowired
 	private ClienteRepository clienteRepository;
 	
+	@Autowired
 	private Utilitario utilitario;
 	/**@Autowired
 	private Gson gson;*/

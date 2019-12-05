@@ -1,7 +1,6 @@
 package com.intercorp.retail.entity;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -35,7 +34,7 @@ public class TbCliente implements Serializable{
 	private Integer edad;
 	
 	@Column(name = "fechanacimiento")
-	private Timestamp fechanacimiento;
+	private Date fechanacimiento;
 
 	public String getIdcliente() {
 		return idcliente;
@@ -69,11 +68,11 @@ public class TbCliente implements Serializable{
 		this.edad = edad;
 	}
 
-	public Timestamp getFechanacimiento() {
+	public Date getFechanacimiento() {
 		return fechanacimiento;
 	}
 
-	public void setFechanacimiento(Timestamp fechanacimiento) {
+	public void setFechanacimiento(Date fechanacimiento) {
 		this.fechanacimiento = fechanacimiento;
 	}
 	

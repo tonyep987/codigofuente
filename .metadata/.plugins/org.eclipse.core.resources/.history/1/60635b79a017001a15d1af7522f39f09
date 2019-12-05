@@ -1,0 +1,5 @@
+package com.intercorp.retail.config;
+
+public class CustomerDateAndTimeDeserialize {
+
+}

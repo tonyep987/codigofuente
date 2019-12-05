@@ -1,0 +1,8 @@
+package com.intercorp.retail.config;
+
+public class SwaggerConfig {
+
+	/*public Docket productApi{
+		
+	}*/
+}
